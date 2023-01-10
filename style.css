@@ -1,0 +1,164 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgColor: #F1F3F8;
+    --fontColor: #0A2647;
+    --deleteColor: #f67a8c;
+    --editColor: #36669c;
+    --mainShadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bgColor);
+    padding: 20px;
+    display: flex;
+    gap: 200px;
+    color: var(--fontColor);
+    height: 100vh;
+}
+
+#sideBar,
+#mainContent {
+    padding: 60px 30px;
+}
+
+#sideBar {
+    background-color: white;
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    -webkit-box-shadow: var(--mainShadow);
+    -moz-box-shadow: var(--mainShadow);
+    box-shadow: var(--mainShadow);
+}
+
+#sideBar .tab {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#sideBar .tab:hover,
+#sideBar .active {
+    background-color: var(--bgColor);
+    border-radius: 8px;
+}
+
+#sideBar .all i {
+    color: #4f7fde;
+}
+
+#sideBar .pending i {
+    color: #FFB800;
+}
+
+#sideBar .completed i {
+    color: #22a028;
+}
+
+#newTask,
+.card {
+    width: 800px;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 20px;
+    -webkit-box-shadow: var(--mainShadow);
+    -moz-box-shadow: var(--mainShadow);
+    box-shadow: var(--mainShadow);
+    margin: 50px 0;
+    position: relative;
+    color: var(--fontColor);
+}
+
+.card,
+.card .cardContent label,
+.card #buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    height: fit-content;
+    gap: 10px;
+    background-color: white;
+}
+
+.card #buttons {
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: var(--deleteColor);
+}
+
+.fa-pen {
+    color: var(--editColor);
+}
+
+.card input {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.card p.checked {
+    text-decoration: line-through;
+}
+
+span {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #CCC;
+    font-weight: 300;
+    margin-top: 100px;
+}
+
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+        color: var(--fontColor);
+        gap: 10px;
+        padding: 0;
+        justify-content: center;
+        height: fit-content;
+    }
+
+    #sideBar {
+        display: flex;
+        border-radius: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #sideBar {
+        padding: 10px;
+    }
+
+    #mainContent {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #newTask,
+    .card {
+        width: 100%;
+        height: fit-content;
+        margin: 30px 0;
+    }
+
+    #newTask {
+        height: 60px;
+    }
+}

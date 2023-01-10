@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!--Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/b6ea5e7973.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Start SideBar-->
+    <div id="sideBar">
+        <div class="tab all active" data-name="All">
+            <i class="fa-solid fa-circle"></i>
+            <p>All</p>
+        </div>
+        <div class="tab pending" data-name="Pending">
+            <i class="fa-solid fa-spinner"></i>
+            <p>Pending</p>
+        </div>
+        <div class="tab completed" data-name="Completed">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Completed</p>
+        </div>
+    </div>
+    <!--End SideBar-->
+    <!--Start MainContent-->
+    <div id="mainContent">
+        <header>
+            <h1>Welcome, Back</h1>
+            <p>it’s Friday, Feb 23</p>
+        </header>
+        <input type="text" name="newTask" id="newTask" placeholder="Add a new Task...">
+        <div id="todosBox"> </div>
+    </div>
+    <!--End MainContent-->
+    <script src="app.js"></script>
+</body>
+
+</html>
