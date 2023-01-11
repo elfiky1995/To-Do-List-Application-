@@ -8,9 +8,10 @@ let editID,
 
 // Create Array For Months to turn the number [index] of months to names
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     d = new Date();
 // making the date showing dynamically depends on current date
-date.innerHTML = `It's ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+date.innerHTML = `It's ${days[d.getDay()]} ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 
 // adding class active by clicking on div
 tabs.forEach(btn => {
