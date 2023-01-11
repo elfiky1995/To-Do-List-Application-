@@ -6,6 +6,12 @@ let editID,
     isEditedTask = false,
     todos = JSON.parse(localStorage.getItem("todo-list")); // getting localstorage to-do list
 
+// Create Array For Months to turn the number [index] of months to names
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    d = new Date();
+// making the date showing dynamically depends on current date
+date.innerHTML = `It's ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+
 // adding class active by clicking on div
 tabs.forEach(btn => {
     btn.addEventListener("click", () => {
