@@ -1,6 +1,7 @@
 const newTask = document.querySelector("#newTask"),
     mainContent = document.querySelector("#todosBox"),
-    tabs = document.querySelectorAll(".tab");
+    tabs = document.querySelectorAll(".tab"),
+    date = document.querySelector("header p");
 
 let editID,
     isEditedTask = false,
